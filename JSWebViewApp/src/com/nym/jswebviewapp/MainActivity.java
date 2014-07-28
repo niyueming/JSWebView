@@ -16,7 +16,12 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+//	mWebView.loadUrl("javascript:myfunction()");
 
+/**
+ * @author nym
+ *
+ */
 public class MainActivity extends Activity implements OnClickListener {
 	private static final int FILECHOOSER_RESULTCODE = 99;
 	/**
@@ -25,6 +30,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private WebView mWebView;
 	private ValueCallback<Uri> mUploadMessage;	//webView上传文件
 	private String url;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
