@@ -51,6 +51,15 @@ public class MainActivity extends Activity implements OnClickListener {
 		mWebView.getSettings().setAllowContentAccess(true);
 		mWebView.getSettings().setAllowFileAccess(true);
 		mWebView.getSettings().setPluginState(PluginState.ON);
+		/**
+	     	* Sets whether the WebView loads pages in overview mode, that is,
+	     	* zooms out the content to fit on screen by width. This setting is
+	     	* taken into account when the content width is greater than the width
+	     	* of the WebView control, for example, when {@link #getUseWideViewPort}
+	     	* is enabled. The default is false.
+	     	*/
+		mWebView.getSettings().setUseWideViewPort(true);
+        	mWebView.getSettings().setLoadWithOverviewMode(true);
 		//启用数据库
 		mWebView.getSettings().setDatabaseEnabled(true);  
 		String dir = this.getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
